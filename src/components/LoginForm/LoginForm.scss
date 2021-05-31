@@ -1,0 +1,71 @@
+@import '../../assets/scss/colors.scss';
+
+.login__form {
+	width: 100%;
+	max-width: 330px;
+	padding: 35px 40px;
+	background-color: #ffffff;
+	border: 1px solid $login-border-color;
+}
+
+.login__heading {
+	margin-top: 0;
+	margin-bottom: 40px;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: $main-black-color;
+}
+
+.login__input {
+	display: block;
+	padding: 15px 10px;
+	padding-left: 40px;
+	width: 100%;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: $login-placeholder-color;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: left 10px center;
+	border: 1px solid $login-border-color;
+	outline: 0;
+
+	&::placeholder {
+		color: rgba($color: $login-placeholder-color, $alpha: 0.4);
+	}
+}
+
+.login__input:nth-of-type(1) {
+	background-image: url('../../assets/images/icon-user.svg');
+}
+
+.login__input:nth-of-type(2) {
+	background-image: url('../../assets/images/icon-password.svg');
+}
+
+.login__input + .login__input {
+	margin-top: 15px;
+}
+
+.login__submit-btn {
+	width: 100%;
+	display: block;
+	margin-top: 30px;
+	padding: 15px;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 17px;
+	text-align: center;
+	color: $main-white-color;
+	background-color: $main-yellow-color;
+	border: none;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}

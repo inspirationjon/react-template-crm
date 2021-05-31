@@ -1,0 +1,72 @@
+@import '../../assets/scss/colors.scss';
+
+.sidebar {
+	position: fixed;
+	top: 74px;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 225px;
+	background-color: $main-dark-color;
+}
+
+.sidebar__list {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.sidebar__list::-webkit-scrollbar {
+	width: 12px;
+}
+
+.sidebar__list::-webkit-scrollbar-track {
+	background: $main-dark-color;
+}
+
+.sidebar__list::-webkit-scrollbar-thumb {
+	background-color: $main-yellow-color;
+	border-radius: 20px;
+	border: 3px solid $main-dark-color;
+}
+
+.sidebar__link--settings {
+	margin-top: auto;
+	border-top: 1px solid $sidebar-border-color;
+}
+
+.sidebar__link {
+	padding: 15px 30px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration: none;
+	color: $main-white-color;
+	transition: background-color 0.2s ease;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+
+	&:hover {
+		background-color: lighten($color: $main-yellow-color, $amount: 6%);
+	}
+
+	svg {
+		margin-right: 15px;
+	}
+}
+
+.sidebar__link--active {
+	background-color: $main-yellow-color;
+}
+
+.sidebar__link--settings {
+	margin-top: auto;
+}

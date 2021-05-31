@@ -1,0 +1,133 @@
+@import '../../assets/scss/colors.scss';
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: $main-dark-color;
+}
+
+.header__right {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	padding: 20px 30px;
+	border-right: 1px solid $header-border-color;
+	border-bottom: 1px solid $header-border-color;
+}
+
+.hamburger {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	padding: 0;
+	padding-top: 6px;
+	margin: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	margin-right: 15px;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.header__logo {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.header__main {
+	flex-grow: 1;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 30px;
+}
+
+.header__search-input {
+	width: 100%;
+	max-width: 400px;
+	padding: 15px;
+	padding-right: 40px;
+	font-weight: 500;
+	font-size: 13px;
+	line-height: 15px;
+	color: rgba($color: $main-black-color, $alpha: 0.6);
+	border: none;
+	background-color: white;
+	outline: 0;
+	background-image: url('../../assets/images/search-icon.svg');
+	background-repeat: no-repeat;
+	background-size: 24px;
+	background-position: right 10px center;
+
+	&::placeholder {
+		font-weight: 500;
+		font-size: 13px;
+		line-height: 15px;
+		color: rgba($color: $main-black-color, $alpha: 0.6);
+	}
+	&:not(:placeholder-shown) {
+		padding-right: 15px;
+		background-image: none;
+	}
+}
+
+.user-avatar__btn {
+	width: 100%;
+	max-width: 120px;
+	display: flex;
+	align-items: center;
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	color: $main-white-color;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+.user-avatar__icon-wrapper {
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-shrink: 0;
+	margin-right: 10px;
+	background-color: $header-gray-color;
+	border-radius: 50%;
+}
+
+.user-avatar__name {
+	width: 60px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 14px;
+	color: $main-white-color;
+}
+
+.user-avatar__bottom-arrow {
+	margin-left: auto;
+}

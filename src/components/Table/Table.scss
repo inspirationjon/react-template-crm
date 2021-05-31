@@ -1,0 +1,55 @@
+@import '../../assets/scss/colors.scss';
+
+table {
+   width: 100%;
+   border-collapse: collapse;
+   border: 1px solid #ddd;
+}
+
+thead {
+   background-color: $main-dark-color;
+   color: #fff;
+
+   th {
+      padding-top: 17px;
+      padding-bottom: 16px;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      border-bottom: 1px solid #ddd;
+
+      &:nth-child(1) {
+         width: 75px;
+         padding-left: 30px;
+         text-align: left;
+      }
+   }
+}
+
+
+tbody {
+   td {
+      height: 58px;
+      font-family: Gilroy;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+
+      &:nth-child(1) {
+         width: 75px;
+         padding-left: 30px;
+         text-align: left;
+      }
+   }
+
+   .pg-column {
+      text-align: right !important;
+      padding-right: 60px;
+   }
+}

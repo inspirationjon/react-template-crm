@@ -1,0 +1,62 @@
+@import '../../assets/scss/colors.scss';
+
+.mini-sidebar {
+	position: fixed;
+	top: 74px;
+	left: 0;
+	bottom: 0;
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 80px;
+	background-color: $main-dark-color;
+}
+
+.mini-sidebar__list {
+	overflow: auto;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.mini-sidebar__list::-webkit-scrollbar {
+	width: 12px;
+}
+
+.mini-sidebar__list::-webkit-scrollbar-track {
+	background: $main-dark-color;
+}
+
+.mini-sidebar__list::-webkit-scrollbar-thumb {
+	background-color: $main-yellow-color;
+	border-radius: 20px;
+	border: 3px solid $main-dark-color;
+}
+
+.mini-sidebar__link--settings {
+	margin-top: auto;
+	border-top: 1px solid $sidebar-border-color;
+}
+
+.mini-sidebar__link {
+	padding: 15px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	transition: background-color 0.2s ease;
+
+	&:hover {
+		background-color: lighten($color: $main-yellow-color, $amount: 6%);
+	}
+}
+
+.mini-sidebar__link--active {
+	background-color: $main-yellow-color;
+}
+
+.mini-sidebar__link--settings {
+	margin-top: auto;
+}
